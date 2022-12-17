@@ -1,25 +1,19 @@
-import logo from './logo.svg';
+import React from 'react';
+// import NewsList from './Components/NewsList';
+import "bootstrap/dist/css/bootstrap.min.css";
+import Navbar from "./Components/Navbar.js";
+import AppRouter from './AppRouter';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App= () => {
+    return(
+        <div>
+            {/* <center><h1>Snappy Newz</h1></center> */}
+            <Navbar />
+            {/* <NewsList qr='Fifa'/> */}
+            <AppRouter />
+        </div>
+    )
 }
 
 export default App;
