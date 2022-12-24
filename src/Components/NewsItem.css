@@ -6,6 +6,7 @@
 .news-item{
     /* background-color: lightyellow; */
     width: 500px;
+    border-radius: 15px;
     padding: 20px;
     border: 1px solid;
     margin-bottom:20px;

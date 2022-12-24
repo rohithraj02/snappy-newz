@@ -1,5 +1,6 @@
 import React from 'react'
 import './NewsItem.css'
+import myimg from './snappyimg.png'
 // import Card from '@mui/material/Card';
 // import CardActions from '@mui/material/CardActions';
 // import CardContent from '@mui/material/CardContent';
@@ -8,20 +9,25 @@ import './NewsItem.css'
 // import Typography from '@mui/material/Typography';
 
 const NewsItem = ({title,description,url,urlToImage,pubAt,content}) => {
-  // var imgsrc=Object.values({urlToImage})
-  // var img=imgsrc[0]
-  // console.log(img)
-  //         if(img==='null')
-  //         console.log('img is empty')
-  //         else
-  //         console.log('img not empty')
+  var imgsrc=Object.values({urlToImage})
+  var img=imgsrc[0]
+  console.log(typeof(img))
+  console.log(img)
+          if(img)
+          console.log('img is not empty')
+          else{
+          urlToImage=myimg
+          console.log(urlToImage)
+          console.log('img is empty')
+        }
   return (
     <div className="news-app">
         <div className="news-item">
+          <header><center><h7>{pubAt.substring(0,10)+' '+pubAt.substring(11,16)}</h7></center></header>
             <img className='news-img' src={urlToImage} alt={content}></img>
             <div className='container'>
               <h3><a href={url}>{title}</a></h3>
-              <h7>{pubAt}</h7>
+              {/* <h7>{pubAt}</h7> */}
               <p>{description}</p>
             </div>
         </div>

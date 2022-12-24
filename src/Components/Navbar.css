@@ -4,6 +4,7 @@
 
 body{
     margin:0;
+    /* position: relative; */
 }
 .nav{
     background-color: grey;

@@ -1,5 +1,6 @@
 import React from "react";
 import './Navbar.css'
+import MyForm from './searchbar'
 import { FaSearch } from "react-icons/fa"
 const Navbar = () => {
     const querySearch=''
@@ -8,8 +9,9 @@ const Navbar = () => {
         <a href="/" className="site-title">Snappy</a>
         <ul>
             <li>
-            <input id='query' type="text" placeholder="Search.."/>
-            <button type="submit"><FaSearch/></button>
+            {/* <input id='query' type="text" placeholder="Search.."/>
+            <button type="submit"><FaSearch/></button> */}
+            <MyForm />
             </li>
             {/* <li><button type="submit"><FaSearch/></button></li> */}
             <li>
@@ -20,6 +22,9 @@ const Navbar = () => {
             </li>
             <li>
                 <a href="/Technology">Technology</a>    
+            </li>
+            <li>
+                <a href="/Science">Science</a>    
             </li>
             <li>
                 <a href="/Entertainment">Entertainment</a>    
