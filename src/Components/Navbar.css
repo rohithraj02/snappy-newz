@@ -7,7 +7,7 @@ body{
     /* position: relative; */
 }
 .nav{
-    background-color: grey;
+    background-color: rgb(69, 95, 120);
     color: rgb(0, 0, 0);
     display: flex;
     justify-content: space-between;

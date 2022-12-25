@@ -11,7 +11,9 @@ const App= () => {
             {/* <center><h1>Snappy Newz</h1></center> */}
             <Navbar />
             {/* <NewsList qr='Fifa'/> */}
+            <div className='content'>
             <AppRouter />
+            </div>
         </div>
     )
 }

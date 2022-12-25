@@ -27,6 +27,7 @@ const NewsItem = ({title,description,url,urlToImage,pubAt,content}) => {
             <img className='news-img' src={urlToImage} alt={content}></img>
             <div className='container'>
               <h3><a href={url}>{title}</a></h3>
+              <br/>
               {/* <h7>{pubAt}</h7> */}
               <p>{description}</p>
             </div>

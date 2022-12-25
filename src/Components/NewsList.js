@@ -11,6 +11,7 @@ const NewsList = ({qr}) => {
     useEffect(() => {
         const getArticles = async()=>{
             const response = await axios.get('https://newsapi.org/v2/top-headlines?country=in&pageSize=39&category='+category+'&sortBy=popularity&apiKey=74f0efd0fe3d47e2a9e6295c6ba71d0c')
+            // const response = await axios.get('https://newsapi.org/v2/top-headlines?country=in&pageSize=39&q='+query+'&sortBy=popularity&apiKey=74f0efd0fe3d47e2a9e6295c6ba71d0c')
             console.log(response)
             setArticles(response.data.articles)
         }
