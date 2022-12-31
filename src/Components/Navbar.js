@@ -11,7 +11,7 @@ const Navbar = () => {
             <li>
             {/* <input id='query' type="text" placeholder="Search.."/>
             <button type="submit"><FaSearch/></button> */}
-            <MyForm />
+            {/* <MyForm /> */}
             </li>
             {/* <li><button type="submit"><FaSearch/></button></li> */}
             <li>

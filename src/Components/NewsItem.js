@@ -11,14 +11,14 @@ import myimg from './snappyimg.png'
 const NewsItem = ({title,description,url,urlToImage,pubAt,content}) => {
   var imgsrc=Object.values({urlToImage})
   var img=imgsrc[0]
-  console.log(typeof(img))
-  console.log(img)
+  // console.log(typeof(img))
+  // console.log(img)
           if(img)
           console.log('img is not empty')
           else{
           urlToImage=myimg
-          console.log(urlToImage)
-          console.log('img is empty')
+          // console.log(urlToImage)
+          // console.log('img is empty')
         }
   return (
     <div className="news-app">
