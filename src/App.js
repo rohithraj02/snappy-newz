@@ -1,5 +1,4 @@
 import React , {useState, useEffect} from 'react'
-// import NewsList from './Components/NewsList';
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "./Components/Navbar.js";
 import AppRouter from './AppRouter';
@@ -19,14 +18,16 @@ const App= () => {
     console.log(message)
     return(
         <div>
-            {/* <Login /> */}
+            {/* <Login />S */}
             <Navbar />
             <div className='content'>
                 <div className='head'>
                 <center>
                     <br></br>
-            <h1>Get Informed</h1>
-            <h1>Get Inspired</h1>
+                        <div>
+                        <h1>Get Informed</h1>
+                        <h1>Get Inspired</h1>
+                        </div>
             <hr></hr>
             <h3>Stories Curated For You</h3>
             </center>

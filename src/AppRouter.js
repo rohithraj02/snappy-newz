@@ -2,6 +2,7 @@ import React from 'react'
 import {BrowserRouter, Routes, Route,Navigate} from "react-router-dom"
 import NewsList from './Components/NewsList'
 import Login from './Components/login'
+import SearchNews from './Components/searchNews'
 
 const AppRouter = () => {
   return (
@@ -15,6 +16,7 @@ const AppRouter = () => {
             <Route path="/technology" element={<NewsList qr='technology'/> } />
             <Route path="/entertainment" element={<NewsList qr='entertainment'/> } />
             <Route path="/business" element={<NewsList qr='business'/> } />
+            <Route path="/search" element={<SearchNews qr='bangalore' />}/>
         </Routes>
     </BrowserRouter>
   )

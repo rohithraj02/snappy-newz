@@ -1,19 +1,15 @@
 import React from "react";
 import './Navbar.css'
-import MyForm from './searchbar'
-import { FaSearch } from "react-icons/fa"
+// import MyForm from './searchbar'
+import MyForm from "./searchbar";
 const Navbar = () => {
-    const querySearch=''
   return (
     <nav className="nav">
         <a href="/" className="site-title">Snappy</a>
         <ul>
             <li>
-            {/* <input id='query' type="text" placeholder="Search.."/>
-            <button type="submit"><FaSearch/></button> */}
-            {/* <MyForm /> */}
+            <MyForm />
             </li>
-            {/* <li><button type="submit"><FaSearch/></button></li> */}
             <li>
                 <a href="/General">General</a>    
             </li>
