@@ -1,4 +1,5 @@
 import { React, useState } from "react";
+import SearchNews from "./searchNews";
 
 var q=''
 function MyForm() {
@@ -33,7 +34,7 @@ function MyForm() {
         </div>
       </form>
       {/* <NewsList qr={qsearch} /> */}
-      {/* <SearchNews qr={q} /> */}
+      <SearchNews qr={q} />
     </>
   )
 }
