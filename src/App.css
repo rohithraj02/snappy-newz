@@ -1,0 +1,22 @@
+/* *{
+    background-color: #95adbe;
+}  */
+ .content{
+    background-color: #141414;
+    padding-left: 55px;
+    /* opacity:10%; */
+    color:white;
+} 
+.head{
+    height: 250px;
+    padding:25px;
+}
+h3{
+    color:red;
+}
+hr{
+    /* color:red; */
+    width:250px;
+    border: 5 px solid #f52828;
+    /* border-style:dashed; */
+}

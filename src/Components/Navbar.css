@@ -1,0 +1,42 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin:0;
+    /* position: relative; */
+}
+.nav{
+    background-color: #262626;
+    position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+    z-index: 100;
+    color: rgb(244, 244, 244);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding: 0 1rem;
+}
+.nav a{
+    color: inherit;
+    text-decoration: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: .25rem;
+}
+.site-title{
+    font-size: 2rem;
+}
+.nav ul{
+   padding: 0;
+   margin: 0;
+   list-style: none;
+   display: flex;
+   gap: 1rem; 
+}
+.nav li:hover{
+    background-color: #777;
+}
