@@ -18,6 +18,18 @@ const NewsList = ({qr}) => {
         getArticles()
     },[category]);
   return (
+    <>
+              <div className='head'>
+            <center>
+              <br></br>
+              <div>
+                <h1>Get Informed</h1>
+                <h1>Get Inspired</h1>
+              </div>
+              <hr></hr>
+              <h3>Stories Curated For You</h3>
+            </center>
+          </div>
     <div className='News'>
       {articles.map(article => {
         return (
@@ -25,6 +37,7 @@ const NewsList = ({qr}) => {
         )
       })} 
     </div>
+    </>
   )
 }
 

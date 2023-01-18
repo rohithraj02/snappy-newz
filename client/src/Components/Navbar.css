@@ -21,6 +21,7 @@ body{
 }
 .nav a{
     color: inherit;
+    background-color: #262626;
     text-decoration: none;
     height: 100%;
     display: flex;
@@ -36,6 +37,7 @@ body{
    list-style: none;
    display: flex;
    gap: 1rem; 
+   background-color: #262626;
 }
 .nav li:hover{
     background-color: #777;

@@ -1,11 +1,18 @@
-/* *{
-    background-color: #95adbe;
-}  */
+*{
+    /* background-color: black; */
+    /* height: 100vw; */
+
+} 
+.maincontent{
+    width: 100vw;
+}
  .content{
-    background-color: #141414;
+    background-color: black;
+    /* height: 100vh; */
     padding-left: 55px;
     /* opacity:10%; */
     color:white;
+    /* width: 100vw; */
 } 
 .head{
     height: 250px;

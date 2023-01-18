@@ -1,91 +1,90 @@
-import React,{useState,useContext} from 'react'
+import React, { useState, useContext } from 'react'
 import { NavLink } from 'react-router-dom'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import {useNavigate} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import myimg from './login-bg.png'
+import './logi.css'
 export default function Logi() {
-  const navigate= useNavigate();
+  const navigate = useNavigate();
 
-  const [user, setUser]=useState({
-      email : "",
-      password : ""
+  const [user, setUser] = useState({
+    email: "",
+    password: ""
   });
 
   // handle inputs
- 
-  const handelInput=(event)=>{
-    let name=event.target.name;
-    let value=event.target.value; 
 
-    setUser({...user,[name]:value});
+  const handelInput = (event) => {
+    let name = event.target.name;
+    let value = event.target.value;
+
+    setUser({ ...user, [name]: value });
   }
 
-// handle submit 
-const handleSubmit = async (event)=>{
-  event.preventDefault();
-  const{email,password}=user;
-  try{
-    const res=await fetch('/login',{
-      method:"POST",
-      headers:{
-        "Content-Type" : "application/json"
-      },
-       body : JSON.stringify({
-        email,password
-       })
-    })
-    if(res.status===400||!res){
-      window.alert("Invalid Credential")
-    }
-    else
-    {
-      window.alert("Login successfull");
-      navigate('/');
-      window.location.reload();
-    }
+  // handle submit 
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const { email, password } = user;
+    try {
+      const res = await fetch('/login', {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          email, password
+        })
+      })
+      if (res.status === 400 || !res) {
+        window.alert("Invalid Credential")
+      }
+      else {
+        window.alert("Login successfull");
+        navigate('/');
+        window.location.reload();
+      }
 
 
-  }catch(error)
-  {
-console.log(error);
+    } catch (error) {
+      console.log(error);
+    }
+
   }
-
-}
   return (
-<div>
-            <div className='container'>
-                <div className='row'>
-                    <div className='col-md-5'>
-                        <h1 className='display-4'>Welcome Back</h1>
-                        <p className='lead'>Enter Your credentials to login</p>
-                        <h5>or</h5>
-                        <NavLink to='/register' className='btn btn-outline-light rounded-pill pb-2 w-50'></NavLink>
-                    </div>
-                    <div className='col-md-6'>
-                        <h1 className='display-6'>LOGIN</h1>
-                        <Form onSubmit={handleSubmit} method="POST">
-                            <Form.Group className="mb-3" controlId="formBasicEmail">
-                                <Form.Label>Email address</Form.Label>
-                                <Form.Control type="email" placeholder="Enter email" name = 'email' value={user.email}  onChange={handelInput} />
-                                <Form.Text className="text-muted">
-                                    We'll never share your email with anyone else.
-                                </Form.Text>
-                            </Form.Group>
-
-                            <Form.Group className="mb-3" controlId="formBasicPassword">
-                                <Form.Label>Password</Form.Label>
-                                <Form.Control type="password" placeholder="Password" name = 'password' value={user.password}  onChange = {handelInput}  />
-                            </Form.Group>
-                            <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                                <Form.Check type="checkbox" label="Check me out" />
-                            </Form.Group>
-                            <Button variant="primary" type="submit">
-                                Submit
-                            </Button>
-                        </Form>
-                    </div>
-                </div>
+    <div className='main'>
+      <div className='logdes'>
+        <div className='container'>
+          <div className='row'>
+            <div className='col-md-6 ' id="img">
+              <img className="image" src={myimg} alt="hi" width={400}></img>
             </div>
+            <div className='col-md-6 lg'>
+              <Form onSubmit={handleSubmit} method="POST">
+                <h1 className='display-5'>LOGIN</h1>
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                  <Form.Label>Email address</Form.Label>
+                  <Form.Control type="email" placeholder="Enter email" name='email' value={user.email} onChange={handelInput} />
+                  <Form.Text className="text-muted">
+                    We'll never share your email with anyone else.
+                  </Form.Text>
+                </Form.Group>
+
+                <Form.Group className="mb-3" controlId="formBasicPassword">
+                  <Form.Label>Password</Form.Label>
+                  <Form.Control type="password" placeholder="Password" name='password' value={user.password} onChange={handelInput} />
+                </Form.Group>
+                {/* <Form.Group className="mb-3" controlId="formBasicCheckbox">
+                  <Form.Check type="checkbox" label="Check me out" />
+                </Form.Group> */}
+                <Button variant="primary" type="submit">
+                  Submit
+                </Button>
+              </Form>
+            </div>
+          </div>
         </div>
+      </div>
+    </div>
   )
 }

@@ -5,6 +5,7 @@ import SearchNews from './Components/searchNews'
 import Logi from './Components/logi'
 import Register from './Components/Register'
 import Logout from './Components/Logout'
+import MyForm from './Components/searchbar'
 const AppRouter = () => {
   const [auth,setauth]=useState(false);
   const [auth1,setauth1]=useState(true);
@@ -49,7 +50,7 @@ const AppRouter = () => {
             <Route path="/technology" element={<NewsList qr='technology'/> } />
             <Route path="/entertainment" element={<NewsList qr='entertainment'/> } />
             <Route path="/business" element={<NewsList qr='business'/> } />
-            <Route path="/search" element={<SearchNews qr='bangalore' />}/>
+            <Route path="/search" element={<MyForm />}/>
             {/* {/* <Route path="/login1" component={login1}/> */}
         </Routes>
     </BrowserRouter>

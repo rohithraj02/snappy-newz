@@ -5,15 +5,18 @@
     display : grid;
     gap:1 rem;
     /* justify-content:center; */
-    grid-template-columns: repeat(3,0.4fr);
+    grid-template-columns: repeat(4,0.4fr);
     
 }
 @media (min-width: 0px) {
     .News { grid-template-columns: repeat(1, 0.4fr); }
   }
-@media (min-width: 600px) {
+@media (min-width: 500px) {
     .News { grid-template-columns: repeat(2, 0.4fr); }
   }
-  @media (min-width: 1000px) {
+  @media (min-width: 1647px) {
     .News { grid-template-columns: repeat(3, 0.4fr); }
+  }
+  @media (min-width: 1990px) {
+    .News { grid-template-columns: repeat(4, 0.4fr); }
   }
