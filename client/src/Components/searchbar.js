@@ -7,7 +7,7 @@ function MyForm() {
   let qsearch = ''
   const handleSubmit = (event) => {
     event.preventDefault();
-    // <SearchNews qr={name} />
+  
     q=name
     console.log(q)
     // var articles = [];
@@ -22,6 +22,8 @@ function MyForm() {
   }
   return (
     <>
+    <div>
+
       <form onSubmit={handleSubmit}>
         <div class="input-group">
           <div id="search-autocomplete" >
@@ -34,9 +36,11 @@ function MyForm() {
         </div>
       </form>
       {/* <NewsList qr={qsearch} /> */}
+    </div>
       <SearchNews qr={q} />
     </>
   )
 }
 
 export default MyForm;
+export {q}  

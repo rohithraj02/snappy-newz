@@ -2,14 +2,8 @@ import React,{useState,useContext} from 'react'
 import { NavLink } from 'react-router-dom'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-// import React, { useState } from 'react';
-// import {useHistory} from 'react-router-dom';
 import {useNavigate} from 'react-router-dom';
-import App from '../App';
-import Navbar from './Navbar';
-import { UserContext } from '../App';
 export default function Logi() {
-  const {state,dispatch}=useContext(UserContext);
   const navigate= useNavigate();
 
   const [user, setUser]=useState({
@@ -45,15 +39,9 @@ const handleSubmit = async (event)=>{
     }
     else
     {
-      dispatch({type:"USER",payload:true})
-      window.alert("Login successfully");
-    //   history.pushState('/lg');
-    // process.env.isLoggedIn=true;
+      window.alert("Login successfull");
       navigate('/');
-      // window.location.reload();
-      // return(
-      //   <Navbar isLoggedIn={true}></Navbar>
-      // )
+      window.location.reload();
     }
 
 

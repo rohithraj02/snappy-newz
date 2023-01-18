@@ -5,37 +5,45 @@ import AppRouter from './AppRouter';
 import './App.css';
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import Login from './Components/login.js';
-// import { Route,Switch } from 'react-router-dom';
-import logi from './Components/logi.js';
-import Navbarlog from './Components/Navbarlog.jsx';
-import User from './Components/user.jsx';
-import { initialState,reducer } from './reducer/UserReducer.js';
-export const UserContext=createContext();
+
 
 const App= () => {
+        const [auth,setauth]=useState(false);
+        const [auth1,setauth1]=useState(true);
+        const isLoggedIn=async()=>{
+          try{
+            const res=await fetch('/auth',{
+              method : 'GET',
+              headers : {
+                Accept:"application/json",
+                "Content-Type":"application/json"
+              },
+              credentials : "include"
+            });
+            if(res.status===200){
+              setauth(true)
+              setauth1(false)
+            }
+            if(res.status===401){
+              setauth(false)
+              setauth1(true)
+            }
+          }
+          catch(error){
+                 console.log(error)
+          }
+        }
 
-    const [state, dispatch] = useReducer(reducer, initialState)
-    // useEffect(() => {
-    //   fetch("http://localhost:8080/message")
-    //     .then((res) => res.json())
-    //     .then((data) => setMessage(data.message));
-    // }, []);
-    // console.log(message)
-    return(
+       useEffect(()=>{
+        isLoggedIn();
+       },[]);
+
+        return(
+            <div>
+            <Navbar auth={auth}/>
+
+
         <div>
-        <UserContext.Provider value={{state,dispatch}}>
-            <Navbar/>
-
-
-        <div>
-            {/* <Login />S */}
-            {/* <h1>{process.env.isLoggedIn}</h1> */}
-            {/* <Navbarlog></Navbarlog> */}
-            {/* <User/> */}
-            {/* <Switch>
-                <Route exact path="/login" component={logi}></Route>
-            </Switch> */}
             <div className='content'>
                 <div className='head'>
                 <center>
@@ -51,7 +59,6 @@ const App= () => {
             <AppRouter />
             </div>
         </div>
-        </UserContext.Provider>
         </div>
     )
 }

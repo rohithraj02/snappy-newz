@@ -3,11 +3,9 @@ import axios from 'axios'
 import NewsItem from './NewsItem'
 import './Newslist.css'
 import MyForm from './searchbar'
-// To query /v2/top-headlines
 
 const SearchNews= ({qr}) => {
     const [articles,setArticles]= useState([])
-    // const [term,setTerm]= useState('election')
     const query=qr
     console.log(qr)
     useEffect(() => {

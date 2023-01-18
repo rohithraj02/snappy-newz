@@ -1,13 +1,10 @@
-import React , {useState, useEffect} from 'react'
+import React,{useState,useContext,useEffect} from 'react'
 import axios from 'axios'
 import NewsItem from './NewsItem'
 import './Newslist.css'
 
-// To query /v2/top-headlines
-
 const NewsList = ({qr}) => {
     const [articles,setArticles]= useState([])
-    // const [term,setTerm]= useState('election')
     const category=qr
     console.log(qr)
     useEffect(() => {

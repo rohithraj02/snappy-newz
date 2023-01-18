@@ -2,12 +2,9 @@ import React,{useState} from 'react'
 import { NavLink } from 'react-router-dom'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-// import React, { useState } from 'react';
-// import {useHistory} from 'react-router-dom';
 import {useNavigate} from 'react-router-dom';
 
 export default function Register() {
-    //   const history=useHistory();
   const navigate= useNavigate();
 
   const [user, setUser]=useState({
@@ -45,7 +42,6 @@ const handleSubmit = async (event)=>{
     else
     {
       window.alert("registered successfully");
-    //   history.pushState('/lg');
       navigate('/login');
     }
 

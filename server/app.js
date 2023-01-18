@@ -14,6 +14,7 @@ require('./db/conn');
 const port=process.env.PORT;
 //require model and error because of db connection
 const Users= require('./db/models/userSchema');
+const authenticate=require('./middleware/authenticate')
 
 
 // this method is used to get data from frontend
@@ -91,6 +92,11 @@ app.get('/logout',(req,res)=>{
     res.clearCookie("jwt",{path:'/'})
     res.status(200).send("User Logged Out")
 })
+
+app.get('/auth',authenticate,(req,res)=>{
+
+})
+
 app.listen(port,()=>{
     console.log("server is listening");
 })
