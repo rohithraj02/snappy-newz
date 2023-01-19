@@ -4,6 +4,7 @@
     /* background-color: white; */
     /* justify-content:center; */
     grid-template-columns: repeat(3,1fr);
+    overflow-x: visible;
 }
 .news_item{
     /* background-color: lightyellow; */

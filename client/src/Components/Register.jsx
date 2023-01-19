@@ -92,7 +92,9 @@ export default function Register() {
             </Form>
           </div>
           <div className='col-md-6 ' id="img2">
+            <div className='img_container'>
             <img className="image" src={myimg} alt="hi" width={400}></img>
+            </div>
           {/* </div> */}
           {/* <h5>or</h5>
                         <NavLink to='/register' className='btn btn-outline-light rounded-pill pb-2 w-50'></NavLink> */}

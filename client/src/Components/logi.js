@@ -36,6 +36,7 @@ export default function Logi() {
           email, password
         })
       })
+      console.log(email)
       if (res.status === 400 || !res) {
         window.alert("Invalid Credential")
       }
@@ -57,7 +58,9 @@ export default function Logi() {
         <div className='container'>
           <div className='row'>
             <div className='col-md-6 ' id="img">
+              <div className='img_container'>
               <img className="image" src={myimg} alt="hi" width={400}></img>
+              </div>
             </div>
             <div className='col-md-6 lg'>
               <Form onSubmit={handleSubmit} method="POST">
@@ -74,9 +77,6 @@ export default function Logi() {
                   <Form.Label>Password</Form.Label>
                   <Form.Control type="password" placeholder="Password" name='password' value={user.password} onChange={handelInput} />
                 </Form.Group>
-                {/* <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                  <Form.Check type="checkbox" label="Check me out" />
-                </Form.Group> */}
                 <Button variant="primary" type="submit">
                   Submit
                 </Button>

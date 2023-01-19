@@ -5,6 +5,7 @@ import AppRouter from './AppRouter';
 import './App.css';
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import Navbar1 from './Components/Navbar.js';
 
 
 const App = () => {
@@ -40,20 +41,9 @@ const App = () => {
 
   return (
     <div className='maincontent'>
-      <Navbar auth={auth} />
+      <Navbar1 auth={auth} />
       <div>
         <div className='content'>
-          {/* <div className='head'>
-            <center>
-              <br></br>
-              <div>
-                <h1>Get Informed</h1>
-                <h1>Get Inspired</h1>
-              </div>
-              <hr></hr>
-              <h3>Stories Curated For You</h3>
-            </center>
-          </div> */}
           <AppRouter />
         </div>
       </div>

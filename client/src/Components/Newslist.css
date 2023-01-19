@@ -7,16 +7,17 @@
     /* justify-content:center; */
     grid-template-columns: repeat(4,0.4fr);
     
+    
 }
 @media (min-width: 0px) {
-    .News { grid-template-columns: repeat(1, 0.4fr); }
+    .News { grid-template-columns: repeat(1, 1.0fr); }
   }
-@media (min-width: 500px) {
-    .News { grid-template-columns: repeat(2, 0.4fr); }
+@media (min-width: 1040px) {
+    .News { grid-template-columns: repeat(2, 0.9fr); }
   }
   @media (min-width: 1647px) {
     .News { grid-template-columns: repeat(3, 0.4fr); }
   }
-  @media (min-width: 1990px) {
+  @media (min-width: 2080px) {
     .News { grid-template-columns: repeat(4, 0.4fr); }
   }
