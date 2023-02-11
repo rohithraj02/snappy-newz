@@ -30,7 +30,7 @@ const Navbar1 = (props) => {
         </Navbar.Collapse>
       </Container>
     </Navbar> */}
-          <nav className="nav navbar navbar-expand-lg">
+          <nav className="nav">
             <a href="/" className="site-title">Snappy</a>
             <ul>
               <li>

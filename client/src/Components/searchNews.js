@@ -2,7 +2,7 @@ import React , {useState, useEffect} from 'react'
 import axios from 'axios'
 import NewsItem from './NewsItem'
 import './Newslist.css'
-import MyForm from './searchbar'
+// import MyForm from './searchbar'
 
 const SearchNews= ({qr}) => {
     const [articles,setArticles]= useState([])
