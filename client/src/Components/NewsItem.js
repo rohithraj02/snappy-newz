@@ -28,7 +28,7 @@ const NewsItem = ({ title, description, url, urlToImage, pubAt, content }) => {
 
 
 <Card bg="light" text="dark" className="news_item" style={{ width: '30rem' }}>
-<header><center><h7>{pubAt.substring(0, 10) + ' ' + pubAt.substring(11, 16)}</h7></center></header>
+{/* <header><center><h7>{pubAt.substring(0, 10) + ' ' + pubAt.substring(11, 16)}</h7></center></header> */}
 <Card.Img className="news-img" variant="top" src={urlToImage} />
 <Card.Body bg="light">
   {/* <Card.Title bg="light"></Card.Title> */}
